@@ -1,6 +1,8 @@
 # Proyecto Investigación : AWS CDK
 Repositorio para el Proyecto de Investigación para el curso de Cloud Computing sobre AWS CDK
 
+![image](https://github.com/user-attachments/assets/6d2d41f1-52bd-4a31-abd9-04c3fed00a60)
+
 
 #Bibliografía 
 *Customize AWS CDK bootstrapping - AWS Cloud Development Kit (AWS CDK) v2. *(s. f.). https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping-customizing.html
