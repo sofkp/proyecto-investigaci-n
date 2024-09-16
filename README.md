@@ -231,7 +231,7 @@ Este paso es importante para confirmar que la infraestructura está operativa y 
 
 
 
-#Bibliografía 
+#Bibliografía    
 *Customize AWS CDK bootstrapping - AWS Cloud Development Kit (AWS CDK) v2. *(s. f.). https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping-customizing.html
 
 *DefaultStackSynthesizer — AWS Cloud Development Kit 2.158.0 documentation. *(2020). https://docs.aws.amazon.com/cdk/api/v2/python/aws_cdk/DefaultStackSynthesizer.html
