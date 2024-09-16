@@ -32,6 +32,7 @@ Accede a la instancia de Ubuntu 22.04 LTS, revisa el estado del sistema y las ac
 
 Directorios AWS
 Navega al directorio /home/ubuntu/.aws y edita el archivo credentials para configurar las credenciales de AWS.
+![image](https://github.com/user-attachments/assets/6cd968fa-c7d8-4d05-9d95-fd301e731622)
 Para configurar las credenciales de AWS en tu máquina local
 
 Navegar al Directorio de Configuración de AWS: Utiliza el siguiente comando para moverte al directorio .aws, que es donde AWS guarda sus archivos de configuración:
@@ -62,7 +63,6 @@ aws_access_key_id = TU_ACCESS_KEY_ID
 aws_secret_access_key = TU_SECRET_ACCESS_KEY
 ![image](https://github.com/user-attachments/assets/b99d7f41-166a-4035-b037-ffaaaa3e5636)
 ![image](https://github.com/user-attachments/assets/c7124f07-9ed2-4f0d-9aac-c72ac6fa6386)
-![image](https://github.com/user-attachments/assets/6cd968fa-c7d8-4d05-9d95-fd301e731622)
 
 
 
