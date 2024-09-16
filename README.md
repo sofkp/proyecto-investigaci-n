@@ -16,6 +16,7 @@ Implementación: Creación de una Máquina Virtual 🖥️
 En esta implementación, vamos a utilizar AWS CDK para crear una máquina virtual (EC2) en la nube de AWS. Esta instancia contendrá dos aplicaciones web: websimple y webplantilla. La aplicación websimple ofrecerá una configuración básica y funcional, mientras que webplantilla añadirá una capa extra de personalización y estructura a la implementación. 🌐📦
 
 ![image](https://github.com/user-attachments/assets/6d2d41f1-52bd-4a31-abd9-04c3fed00a60)
+
 1)Conexión a la Máquina Virtual en AWS
 Acceso vía SSH: Usamos el comando ssh -i ./ssh/labuser.pem ubuntu@52.23.232.31 para conectarnos a la máquina virtual en AWS.
 Clave del host: Autenticamos la conexión y agregamos la clave del host a los known hosts.
