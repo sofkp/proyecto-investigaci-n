@@ -23,6 +23,19 @@ Sistema Ubuntu: Acceso a una instancia de Ubuntu 22.04 LTS, revisión de estado 
 Directorios AWS: Navegamos al directorio /home/ubuntu/.aws y editamos el archivo credentials para configurar credenciales de AWS.
 ![image](https://github.com/user-attachments/assets/6d2d41f1-52bd-4a31-abd9-04c3fed00a60)
 
+2)Inicialización del Proyecto AWS CDK con TypeScript
+Inicialización: Se ejecuta cdk init app --language typescript para crear una aplicación base de AWS CDK en TypeScript.
+Comandos útiles:
+npm run build: Compila TypeScript a JavaScript.
+npm run watch: Compila automáticamente en cada cambio.
+npm run test: Ejecuta las pruebas Jest.
+cdk deploy: Despliega el stack en la cuenta/region de AWS.
+cdk diff: Muestra los cambios respecto al estado actual.
+cdk synth: Genera la plantilla de CloudFormation.
+Git Repository: Inicializa un repositorio Git y configura la rama master (con sugerencia para cambiar a main).
+![image](https://github.com/user-attachments/assets/39eb2abc-97b8-4153-81d6-8d4e3f5c4b40)
+
+
 
 
 #Bibliografía 
