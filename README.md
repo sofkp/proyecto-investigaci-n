@@ -166,7 +166,67 @@ Confirmación del Despliegue Exitoso: El estado de los stacks indica que tanto l
 
 ![image](https://github.com/user-attachments/assets/283568be-b554-4773-9497-4d7ee90b757c)
 
-9.
+9. Despliegue de la infraestructura con CDK🖥️
+En este paso, ejecuto el comando cdk deploy para desplegar la infraestructura definida en AWS. El proceso de despliegue incluye los siguientes elementos:
+
+Compilación y Publicación de Artefactos: CDK construye la pila (ProyectoInvestigacionStack) y publica los artefactos necesarios para que CloudFormation pueda desplegar los recursos.
+
+Advertencias: Aparece una advertencia indicando que la API MachineImage#latestAmazonLinux está en desuso y será eliminada en futuras versiones. Esto no detiene el despliegue, pero se recomienda actualizarla a MachineImage.latestAmazonLinux.
+
+Errores de Credenciales: Durante el proceso, se generan advertencias sobre credenciales que no pueden asumir roles específicos. Esto sucede porque las credenciales actuales no tienen los permisos necesarios para algunos roles en la cuenta de AWS, pero el despliegue puede continuar.
+
+Revisión de Cambios de Seguridad: CDK muestra una lista de cambios potencialmente sensibles en las reglas de los grupos de seguridad, solicitando confirmación para proceder. En este caso, se permiten conexiones SSH (Puerto 22) y HTTP (Puerto 80) desde cualquier dirección IPv4.
+
+Ejecución del Despliegue: Tras confirmar la intención de aplicar estos cambios, CDK inicia la creación del stack usando CloudFormation, lo que aprovisiona todos los recursos en AWS.
+
+Este paso es crucial, ya que asegura que todos los componentes de la infraestructura estén disponibles en la nube para su uso.
+![image](https://github.com/user-attachments/assets/6e5f5383-35d0-4849-b4a3-065fb49df22e)
+
+10. Despliegue Completo y Resultados🖥️
+Una vez completado el despliegue de la infraestructura con cdk deploy, se muestra la siguiente información:
+
+Dirección IP Pública de la Instancia EC2:
+
+La IP pública de la instancia desplegada es 3.80.123.244. Esta IP puede usarse para acceder al servidor.
+URLs de los Servicios Web Desplegados:
+
+La plantilla web desplegada puede accederse desde: http://3.80.123.244/webplantilla
+Una segunda aplicación web simple puede accederse desde: http://3.80.123.244/websimple
+Stack ARN:
+
+El ARN del stack es arn:aws:cloudformation:us-east-1:246795990712:stack/ProyectoInvestigacionStack/f53e3120-73c5-11ef-a22c-128c7975f89d, que identifica de forma única el stack en AWS.
+Tiempo de Despliegue:
+
+El despliegue completo tomó aproximadamente 157 segundos, incluyendo la creación de todos los recursos necesarios en AWS.
+Este detalle finaliza la explicación del despliegue en el Paso 9 y proporciona información clave sobre los recursos y accesos a los servicios web.
+![image](https://github.com/user-attachments/assets/6a00168d-c32b-4508-9777-ac0222ffa33c)
+
+11.Verificación de las Instancias Desplegadas🖥️
+Después del despliegue exitoso de la infraestructura con CDK, se puede verificar la instancia EC2 creada accediendo al panel de control de EC2 en la consola de AWS. En este caso, se han desplegado y gestionado varias máquinas virtuales (MV), como se muestra en la lista:
+
+Instancia ProyectoInvestigacionStack:
+
+ID de la instancia: i-015fe55803a19fb04.
+Tipo de instancia: t2.small, que tiene más capacidad que las otras dos instancias t2.micro.
+Estado: Running (en ejecución), con todos los checks de estado (2/2) pasados exitosamente.
+IP Pública: 3.80.123.244, la cual se puede usar para acceder al servicio desplegado en esta instancia.
+Otras instancias (para desarrollo y pruebas):
+
+Se observan otras dos instancias (MV Pruebas y MV Desarrollo) con diferentes configuraciones, pero no forman parte directa del stack desplegado.
+Este paso es importante para confirmar que la infraestructura está operativa y accesible.
+![image](https://github.com/user-attachments/assets/1ae85226-9ee5-4832-b71e-c24ce2b9659a)
+
+12.Realizacion🖥️
+La imagen muestra que has creado una pila de AWS CloudFormation llamada "ProyectoInvestigacionStack." El estado de la pila es "CREATE_COMPLETE," lo que significa que se ha creado con éxito. Este es el paso final en el que confirmas que todos los recursos de AWS que definiste se han implementado correctamente.
+
+![image](https://github.com/user-attachments/assets/3d78a60d-2c6a-4994-bd77-20f7ea09d335)
+
+
+
+
+
+
+
 
 
 
