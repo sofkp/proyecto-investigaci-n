@@ -15,7 +15,7 @@ Implementación: Creación de una Máquina Virtual 🖥️
 
 En esta implementación, vamos a utilizar AWS CDK para crear una máquina virtual (EC2) en la nube de AWS. Esta instancia contendrá dos aplicaciones web: websimple y webplantilla. La aplicación websimple ofrecerá una configuración básica y funcional, mientras que webplantilla añadirá una capa extra de personalización y estructura a la implementación. 🌐📦
 
-1. Conexión a la Máquina Virtual en AWS
+1. Conexión a la Máquina Virtual en AWS🖥️
 Para conectarte a tu máquina virtual en AWS, sigue estos pasos:
 
 Acceso vía SSH
@@ -36,7 +36,7 @@ Navega al directorio /home/ubuntu/.aws y edita el archivo credentials para confi
 
 
 
-2. Inicialización del Proyecto AWS CDK con TypeScript
+2. Inicialización del Proyecto AWS CDK con TypeScript🖥️
 Inicialización
 Ejecuta el siguiente comando para crear una aplicación base de AWS CDK en TypeScript:
 
@@ -61,13 +61,14 @@ git commit -m "Initial commit"
 git branch -M main
 ![image](https://github.com/user-attachments/assets/97118be0-bf21-4295-acb5-f3e91c7dd8ce)
 
-3.
-Listar archivos del directorio principal (ls -l): Se utiliza para mostrar los archivos y carpetas dentro del directorio principal del proyecto junto con sus permisos, propietarios, tamaños y fechas de modificación.
+3.Listar archivos del directorio principal🖥️
+
+(ls -l): Se utiliza para mostrar los archivos y carpetas dentro del directorio principal del proyecto junto con sus permisos, propietarios, tamaños y fechas de modificación.
 Cambio de directorio y listado de archivos (cd bin && ls -l): Cambia al subdirectorio bin y lista los archivos dentro de él. En este caso, se encuentra el archivo proyecto-investigacion.ts.
 Edición de archivo (nano proyecto-investigacion.ts): Se utiliza el editor de texto nano para abrir y modificar el archivo proyecto-investigacion.ts dentro del directorio bin.
 ![image](https://github.com/user-attachments/assets/e2df38f5-4729-4d54-baab-63d66b481224)
 
-4.Comandos AWS CDK
+4.Comandos AWS CDK🖥️
 Cambio de directorio (cd /home/ubuntu/proyecto-investigacion): Cambia al directorio donde se encuentra el proyecto llamado proyecto-investigacion.
 
 Generar plantilla de bootstrap (cdk bootstrap --show-template > bootstrap-template.yaml): Utiliza AWS CDK para generar una plantilla de bootstrap y guarda esta plantilla en un archivo llamado bootstrap-template.yaml. Este archivo contiene la infraestructura básica para inicializar un entorno AWS.
@@ -76,7 +77,7 @@ Edición de archivo YAML (nano bootstrap-template.yaml): Abre el archivo bootstr
 
 ![image](https://github.com/user-attachments/assets/aa95f381-daa1-4e79-8122-be750895b5a0)
 
-5.Buckets de Amazon S3
+5.Buckets de Amazon S3🖥️
 La imagen muestra la sección de "General Purpose Buckets" en la consola de Amazon S3. Aquí se listan los buckets que almacenan los datos de un proyecto en la nube. Los buckets mostrados son:
 
 cdk-hnb659fds-assets-246795990712-us-east-1: Utilizado para almacenar activos generados por el AWS CDK (Cloud Development Kit).
@@ -85,7 +86,7 @@ Cada bucket tiene una columna que muestra la región, la fecha de creación y un
 
 ![image](https://github.com/user-attachments/assets/05485a58-721c-4e1e-9f22-90791d069ddb)
 
-6.Configuración de Credenciales de AWS
+6.Configuración de Credenciales de AWS🖥️
 Para configurar las credenciales de AWS en tu máquina local, sigue estos pasos:
 
 Navegar al Directorio de Configuración de AWS: Utiliza el siguiente comando para moverte al directorio .aws, que es donde AWS guarda sus archivos de configuración:
@@ -117,7 +118,7 @@ aws_secret_access_key = TU_SECRET_ACCESS_KEY
 ![image](https://github.com/user-attachments/assets/b99d7f41-166a-4035-b037-ffaaaa3e5636)
 ![image](https://github.com/user-attachments/assets/c7124f07-9ed2-4f0d-9aac-c72ac6fa6386)
 
-7.Inicialización del Entorno con AWS CDK Bootstrap
+7.Inicialización del Entorno con AWS CDK Bootstrap🖥️
 Para desplegar infraestructura utilizando AWS CDK, es necesario preparar el entorno de AWS mediante el proceso de bootstrap. Esto instala los recursos necesarios en la cuenta de AWS para que CDK pueda funcionar correctamente.
 
 A continuación, los pasos que seguí para hacerlo:
@@ -147,8 +148,25 @@ Environment aws://246795990712/us-east-1 bootstrapped.
 Este paso es esencial para asegurarse de que el entorno de AWS esté listo para gestionar los recursos que definiré y desplegaré usando AWS CDK. Ahora, con el entorno bootstrapped, puedo proceder a crear y desplegar mis infraestructuras como código en AWS.
 ![image](https://github.com/user-attachments/assets/efb8f594-ebe5-412d-a686-d1f5686db319)
 
-8.
+8.Verificación de Stacks Desplegados en AWS CloudFormation🖥️
+Después de inicializar el entorno de AWS CDK mediante el proceso de bootstrap, es importante revisar los stacks creados para confirmar que el entorno está listo para desplegar aplicaciones. Aquí está lo que hice:
 
+Acceder al Panel de AWS CloudFormation: Ingresé al servicio de AWS CloudFormation para revisar los stacks creados. CloudFormation se encarga de gestionar los recursos desplegados mediante plantillas definidas en AWS CDK.
+
+Stacks Desplegados: En el panel se pueden observar los siguientes stacks con el estado CREATE_COMPLETE, lo que indica que fueron creados exitosamente:
+
+CDKToolkit: Este stack incluye los recursos necesarios para desplegar aplicaciones de AWS CDK en este entorno. Fue creado automáticamente durante el proceso de bootstrap.
+ProyectoInvestigacionStack: Este stack corresponde a los recursos específicos que definí para el proyecto de investigación que estoy desplegando. También muestra el estado CREATE_COMPLETE, lo que indica que la infraestructura se ha desplegado correctamente.
+Detalles del Stack CDKToolkit:
+
+Stack ID: Identificador del stack en CloudFormation, que incluye la región y la cuenta de AWS donde fue desplegado.
+Descripción: Este stack contiene los recursos básicos necesarios para desplegar aplicaciones de CDK en este entorno.
+Estado: El estado final CREATE_COMPLETE confirma que el proceso de creación del stack ha finalizado sin problemas.
+Confirmación del Despliegue Exitoso: El estado de los stacks indica que tanto la infraestructura básica de CDKToolkit como los recursos específicos del proyecto fueron creados satisfactoriamente, lo que permite continuar con el despliegue de la aplicación o servicio utilizando AWS CDK.
+
+![image](https://github.com/user-attachments/assets/283568be-b554-4773-9497-4d7ee90b757c)
+
+9.
 
 
 
