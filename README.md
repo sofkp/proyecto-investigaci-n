@@ -246,6 +246,29 @@ Este proyecto define y despliega la infraestructura en AWS usando AWS CDK con Ja
 
 
 
+2. La imagen muestra la salida del comando cdk bootstrap --template bootstrap-template.yaml, que se usa para inicializar el entorno de despliegue de AWS Cloud Development Kit (CDK). Esto crea los recursos necesarios en la cuenta de AWS para permitir despliegues de aplicaciones definidas mediante CDK.
+   ![image](https://github.com/user-attachments/assets/c512e1d4-4dcf-475a-b990-5468198da99e)
+   ![image](https://github.com/user-attachments/assets/c2fba690-bf3e-4525-bb5a-7a921fa415de)
+  La imagen muestra el resultado del despliegue de una pila (stack) en AWS usando CloudFormation a través de CDK (Cloud Development Kit)
+![image](https://github.com/user-attachments/assets/a83d00b3-35cf-4df4-9d7e-47f68e4de142)
+3.La creacion fue exitosa
+![image](https://github.com/user-attachments/assets/7c5d2bab-f060-4cc1-9cde-3a5151aa3182)
+4.La imagen muestra la ejecución del comando cdk destroy, utilizado para eliminar la pila de recursos de AWS creada anteriormente con CDK. Aquí te explico los detalles clave:
+
+Advertencia: Se muestra una advertencia similar a las anteriores, indicando que la API MachineImage#latestAmazonLinux está en desuso, recomendando usar MachineImage.latestAmazonLinux2 en su lugar.
+
+Confirmación de eliminación: El sistema te pregunta si deseas eliminar la pila JavaStack, a lo que respondes con "y" (sí).
+
+Destrucción de la pila: El proceso comienza a destruir los recursos asociados con la pila JavaStack. Aunque muestra una advertencia de que no se pueden asumir ciertas credenciales, el proceso continúa de todos modos.
+
+Resultado: La pila JavaStack ha sido eliminada correctamente, con el estado final marcado como destroyed (destruido).
+
+En resumen, has eliminado con éxito la pila y los recursos que habías creado previamente en AWS.
+![image](https://github.com/user-attachments/assets/2299f525-f99f-4e7f-80de-dfb16bf0c50c)
+
+
+
+
 
 
 
