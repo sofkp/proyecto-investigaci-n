@@ -18,6 +18,7 @@ En esta implementación, vamos a utilizar AWS CDK para crear una máquina virtua
 ![image](https://github.com/user-attachments/assets/6d2d41f1-52bd-4a31-abd9-04c3fed00a60)
 
 1)Conexión a la Máquina Virtual en AWS
+
 Acceso vía SSH: Usamos el comando ssh -i ./ssh/labuser.pem ubuntu@52.23.232.31 para conectarnos a la máquina virtual en AWS.
 Clave del host: Autenticamos la conexión y agregamos la clave del host a los known hosts.
 Sistema Ubuntu: Acceso a una instancia de Ubuntu 22.04 LTS, revisión de estado del sistema y actualizaciones disponibles.
