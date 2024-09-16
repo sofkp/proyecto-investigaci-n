@@ -118,7 +118,7 @@ Cada bucket tiene una columna que muestra la región, la fecha de creación y un
 
 ![image](https://github.com/user-attachments/assets/05485a58-721c-4e1e-9f22-90791d069ddb)
 
-7.Inicialización del Entorno con AWS CDK Bootstrap🖥️
+6.Inicialización del Entorno con AWS CDK Bootstrap🖥️
 Para desplegar infraestructura utilizando AWS CDK, es necesario preparar el entorno de AWS mediante el proceso de bootstrap. Esto instala los recursos necesarios en la cuenta de AWS para que CDK pueda funcionar correctamente.
 
 A continuación, los pasos que seguí para hacerlo:
@@ -148,7 +148,7 @@ Environment aws://246795990712/us-east-1 bootstrapped.
 Este paso es esencial para asegurarse de que el entorno de AWS esté listo para gestionar los recursos que definiré y desplegaré usando AWS CDK. Ahora, con el entorno bootstrapped, puedo proceder a crear y desplegar mis infraestructuras como código en AWS.
 ![image](https://github.com/user-attachments/assets/efb8f594-ebe5-412d-a686-d1f5686db319)
 
-8.Verificación de Stacks Desplegados en AWS CloudFormation🖥️
+7.Verificación de Stacks Desplegados en AWS CloudFormation🖥️
 Después de inicializar el entorno de AWS CDK mediante el proceso de bootstrap, es importante revisar los stacks creados para confirmar que el entorno está listo para desplegar aplicaciones. Aquí está lo que hice:
 
 Acceder al Panel de AWS CloudFormation: Ingresé al servicio de AWS CloudFormation para revisar los stacks creados. CloudFormation se encarga de gestionar los recursos desplegados mediante plantillas definidas en AWS CDK.
@@ -166,7 +166,7 @@ Confirmación del Despliegue Exitoso: El estado de los stacks indica que tanto l
 
 ![image](https://github.com/user-attachments/assets/283568be-b554-4773-9497-4d7ee90b757c)
 
-9. Despliegue de la infraestructura con CDK🖥️
+8. Despliegue de la infraestructura con CDK🖥️
 En este paso, ejecuto el comando cdk deploy para desplegar la infraestructura definida en AWS. El proceso de despliegue incluye los siguientes elementos:
 
 Compilación y Publicación de Artefactos: CDK construye la pila (ProyectoInvestigacionStack) y publica los artefactos necesarios para que CloudFormation pueda desplegar los recursos.
@@ -182,7 +182,7 @@ Ejecución del Despliegue: Tras confirmar la intención de aplicar estos cambios
 Este paso es crucial, ya que asegura que todos los componentes de la infraestructura estén disponibles en la nube para su uso.
 ![image](https://github.com/user-attachments/assets/6e5f5383-35d0-4849-b4a3-065fb49df22e)
 
-10. Despliegue Completo y Resultados🖥️
+9. Despliegue Completo y Resultados🖥️
 Una vez completado el despliegue de la infraestructura con cdk deploy, se muestra la siguiente información:
 
 Dirección IP Pública de la Instancia EC2:
@@ -202,7 +202,7 @@ Este detalle finaliza la explicación del despliegue en el Paso 9 y proporciona 
 ![image](https://github.com/user-attachments/assets/6a00168d-c32b-4508-9777-ac0222ffa33c)
 
 
-11.Realizacion🖥️
+10.Realizacion🖥️
 La imagen muestra que has creado una pila de AWS CloudFormation llamada "ProyectoInvestigacionStack." El estado de la pila es "CREATE_COMPLETE," lo que significa que se ha creado con éxito. Este es el paso final en el que confirmas que todos los recursos de AWS que definiste se han implementado correctamente.
 
 ![image](https://github.com/user-attachments/assets/3d78a60d-2c6a-4994-bd77-20f7ea09d335)
