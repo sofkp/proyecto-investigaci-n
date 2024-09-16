@@ -32,6 +32,7 @@ Accede a la instancia de Ubuntu 22.04 LTS, revisa el estado del sistema y las ac
 
 Directorios AWS
 Navega al directorio /home/ubuntu/.aws y edita el archivo credentials para configurar las credenciales de AWS.
+
 ![image](https://github.com/user-attachments/assets/6cd968fa-c7d8-4d05-9d95-fd301e731622)
 Para configurar las credenciales de AWS en tu máquina local
 
