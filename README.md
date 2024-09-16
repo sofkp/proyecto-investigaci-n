@@ -222,8 +222,27 @@ Este paso es importante para confirmar que la infraestructura está operativa y 
 
 
 
+JAVA 
 
+1.Inicialización del Proyecto AWS CDK
+Este proyecto fue inicializado utilizando AWS CDK con JavaScript. Se configuró un entorno de desarrollo que permite definir la infraestructura en AWS mediante código.
 
+Pasos Realizados:
+Creación del Proyecto: Se utilizó el comando cdk init app --language javascript para crear la estructura base del proyecto en JavaScript.
+Configuración Automática: El comando generó archivos esenciales, como cdk.json, e instaló automáticamente las dependencias necesarias.
+Uso de Git: Se inicializó un repositorio Git para el control de versiones.
+Comandos Útiles:
+npm run test: Ejecuta pruebas unitarias.
+npx cdk deploy: Despliega la infraestructura definida a la cuenta de AWS.
+npx cdk diff: Compara los cambios entre la infraestructura desplegada y la nueva configuración.
+npx cdk synth: Genera la plantilla de CloudFormation a partir del código.
+Este proyecto utiliza AWS CDK para implementar la infraestructura como código (IaC), facilitando la gestión y despliegue de recursos en AWS.
+
+![image](https://github.com/user-attachments/assets/e94c1011-daf1-4236-b99c-56327bf87635)
+
+Este proyecto define y despliega la infraestructura en AWS usando AWS CDK con JavaScript. Los archivos dentro de bin/ y lib/ contienen la lógica principal para la creación y configuración de recursos de AWS.
+
+![image](https://github.com/user-attachments/assets/0c600c11-9de7-46bd-a57c-a9132af34150)
 
 
 
