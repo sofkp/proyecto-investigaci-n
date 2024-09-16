@@ -32,6 +32,36 @@ Accede a la instancia de Ubuntu 22.04 LTS, revisa el estado del sistema y las ac
 
 Directorios AWS
 Navega al directorio /home/ubuntu/.aws y edita el archivo credentials para configurar las credenciales de AWS.
+Para configurar las credenciales de AWS en tu máquina local
+
+Navegar al Directorio de Configuración de AWS: Utiliza el siguiente comando para moverte al directorio .aws, que es donde AWS guarda sus archivos de configuración:
+
+bash
+Copy code
+cd /home/ubuntu/.aws
+Listar los Archivos en el Directorio de AWS: Ejecuta el siguiente comando para ver los archivos en el directorio .aws:
+
+bash
+Copy code
+ls -l
+Verás dos archivos principales:
+
+config: Contiene la configuración general de AWS.
+credentials: Contiene las credenciales de acceso (clave de acceso y clave secreta).
+Editar el Archivo de Credenciales: Para modificar o agregar nuevas credenciales de AWS, abre el archivo credentials usando un editor de texto como nano:
+
+bash
+Copy code
+nano credentials
+Dentro de este archivo, puedes agregar tus credenciales de la siguiente forma:
+
+ini
+Copy code
+[default]
+aws_access_key_id = TU_ACCESS_KEY_ID
+aws_secret_access_key = TU_SECRET_ACCESS_KEY
+![image](https://github.com/user-attachments/assets/b99d7f41-166a-4035-b037-ffaaaa3e5636)
+![image](https://github.com/user-attachments/assets/c7124f07-9ed2-4f0d-9aac-c72ac6fa6386)
 ![image](https://github.com/user-attachments/assets/6cd968fa-c7d8-4d05-9d95-fd301e731622)
 
 
@@ -85,38 +115,6 @@ cf-templates-pzimtaod5gnl-us-east-1: Buckets de plantillas CloudFormation utiliz
 Cada bucket tiene una columna que muestra la región, la fecha de creación y un acceso al "IAM Access Analyzer", que analiza las políticas de acceso de IAM para asegurar permisos adecuados.
 
 ![image](https://github.com/user-attachments/assets/05485a58-721c-4e1e-9f22-90791d069ddb)
-
-6.Configuración de Credenciales de AWS🖥️
-Para configurar las credenciales de AWS en tu máquina local, sigue estos pasos:
-
-Navegar al Directorio de Configuración de AWS: Utiliza el siguiente comando para moverte al directorio .aws, que es donde AWS guarda sus archivos de configuración:
-
-bash
-Copy code
-cd /home/ubuntu/.aws
-Listar los Archivos en el Directorio de AWS: Ejecuta el siguiente comando para ver los archivos en el directorio .aws:
-
-bash
-Copy code
-ls -l
-Verás dos archivos principales:
-
-config: Contiene la configuración general de AWS.
-credentials: Contiene las credenciales de acceso (clave de acceso y clave secreta).
-Editar el Archivo de Credenciales: Para modificar o agregar nuevas credenciales de AWS, abre el archivo credentials usando un editor de texto como nano:
-
-bash
-Copy code
-nano credentials
-Dentro de este archivo, puedes agregar tus credenciales de la siguiente forma:
-
-ini
-Copy code
-[default]
-aws_access_key_id = TU_ACCESS_KEY_ID
-aws_secret_access_key = TU_SECRET_ACCESS_KEY
-![image](https://github.com/user-attachments/assets/b99d7f41-166a-4035-b037-ffaaaa3e5636)
-![image](https://github.com/user-attachments/assets/c7124f07-9ed2-4f0d-9aac-c72ac6fa6386)
 
 7.Inicialización del Entorno con AWS CDK Bootstrap🖥️
 Para desplegar infraestructura utilizando AWS CDK, es necesario preparar el entorno de AWS mediante el proceso de bootstrap. Esto instala los recursos necesarios en la cuenta de AWS para que CDK pueda funcionar correctamente.
