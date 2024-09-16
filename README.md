@@ -15,25 +15,51 @@ Implementación: Creación de una Máquina Virtual 🖥️
 
 En esta implementación, vamos a utilizar AWS CDK para crear una máquina virtual (EC2) en la nube de AWS. Esta instancia contendrá dos aplicaciones web: websimple y webplantilla. La aplicación websimple ofrecerá una configuración básica y funcional, mientras que webplantilla añadirá una capa extra de personalización y estructura a la implementación. 🌐📦
 
-1)Conexión a la Máquina Virtual en AWS
+1. Conexión a la Máquina Virtual en AWS
+Para conectarte a tu máquina virtual en AWS, sigue estos pasos:
 
-Acceso vía SSH: Usamos el comando ssh -i ./ssh/labuser.pem ubuntu@52.23.232.31 para conectarnos a la máquina virtual en AWS.
-Clave del host: Autenticamos la conexión y agregamos la clave del host a los known hosts.
-Sistema Ubuntu: Acceso a una instancia de Ubuntu 22.04 LTS, revisión de estado del sistema y actualizaciones disponibles.
-Directorios AWS: Navegamos al directorio /home/ubuntu/.aws y editamos el archivo credentials para configurar credenciales de AWS.
-![image](https://github.com/user-attachments/assets/6d2d41f1-52bd-4a31-abd9-04c3fed00a60)
+Acceso vía SSH
+Utiliza el siguiente comando para conectarte a tu máquina virtual:
 
-2)Inicialización del Proyecto AWS CDK con TypeScript
-Inicialización: Se ejecuta cdk init app --language typescript para crear una aplicación base de AWS CDK en TypeScript.
-Comandos útiles:
+bash
+Copy code
+ssh -i ./ssh/labuser.pem ubuntu@52.23.232.31
+Clave del Host
+Autenticamos la conexión y agregamos la clave del host a los known_hosts.
+
+Sistema Ubuntu
+Accede a la instancia de Ubuntu 22.04 LTS, revisa el estado del sistema y las actualizaciones disponibles.
+
+Directorios AWS
+Navega al directorio /home/ubuntu/.aws y edita el archivo credentials para configurar las credenciales de AWS.
+![image](https://github.com/user-attachments/assets/6cd968fa-c7d8-4d05-9d95-fd301e731622)
+
+
+
+2. Inicialización del Proyecto AWS CDK con TypeScript
+Inicialización
+Ejecuta el siguiente comando para crear una aplicación base de AWS CDK en TypeScript:
+
+bash
+Copy code
+cdk init app --language typescript
+Comandos útiles
 npm run build: Compila TypeScript a JavaScript.
 npm run watch: Compila automáticamente en cada cambio.
 npm run test: Ejecuta las pruebas Jest.
 cdk deploy: Despliega el stack en la cuenta/region de AWS.
 cdk diff: Muestra los cambios respecto al estado actual.
 cdk synth: Genera la plantilla de CloudFormation.
-Git Repository: Inicializa un repositorio Git y configura la rama master (con sugerencia para cambiar a main).
-![image](https://github.com/user-attachments/assets/39eb2abc-97b8-4153-81d6-8d4e3f5c4b40)
+Git Repository
+Inicializa un repositorio Git y configura la rama principal (sugerencia para cambiar a main):
+
+bash
+Copy code
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+![image](https://github.com/user-attachments/assets/97118be0-bf21-4295-acb5-f3e91c7dd8ce)
 
 
 
