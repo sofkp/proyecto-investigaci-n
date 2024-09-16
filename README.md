@@ -201,7 +201,11 @@ El despliegue completo tomó aproximadamente 157 segundos, incluyendo la creaci�
 Este detalle finaliza la explicación del despliegue en el Paso 9 y proporciona información clave sobre los recursos y accesos a los servicios web.
 ![image](https://github.com/user-attachments/assets/6a00168d-c32b-4508-9777-ac0222ffa33c)
 
-11.Verificación de las Instancias Desplegadas🖥️
+
+11.Realizacion🖥️
+La imagen muestra que has creado una pila de AWS CloudFormation llamada "ProyectoInvestigacionStack." El estado de la pila es "CREATE_COMPLETE," lo que significa que se ha creado con éxito. Este es el paso final en el que confirmas que todos los recursos de AWS que definiste se han implementado correctamente.
+
+![image](https://github.com/user-attachments/assets/3d78a60d-2c6a-4994-bd77-20f7ea09d335)
 Después del despliegue exitoso de la infraestructura con CDK, se puede verificar la instancia EC2 creada accediendo al panel de control de EC2 en la consola de AWS. En este caso, se han desplegado y gestionado varias máquinas virtuales (MV), como se muestra en la lista:
 
 Instancia ProyectoInvestigacionStack:
@@ -215,11 +219,6 @@ Otras instancias (para desarrollo y pruebas):
 Se observan otras dos instancias (MV Pruebas y MV Desarrollo) con diferentes configuraciones, pero no forman parte directa del stack desplegado.
 Este paso es importante para confirmar que la infraestructura está operativa y accesible.
 ![image](https://github.com/user-attachments/assets/1ae85226-9ee5-4832-b71e-c24ce2b9659a)
-
-12.Realizacion🖥️
-La imagen muestra que has creado una pila de AWS CloudFormation llamada "ProyectoInvestigacionStack." El estado de la pila es "CREATE_COMPLETE," lo que significa que se ha creado con éxito. Este es el paso final en el que confirmas que todos los recursos de AWS que definiste se han implementado correctamente.
-
-![image](https://github.com/user-attachments/assets/3d78a60d-2c6a-4994-bd77-20f7ea09d335)
 
 
 
